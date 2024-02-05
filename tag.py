@@ -9,9 +9,9 @@ tekli_calisan = []
 logging.basicConfig(level=logging.INFO,format='%(name)s - [%(levelname)s] - %(message)s')
 LOGGER = logging.getLogger(__name__)
 
-api_id = API_ID
-api_hash = API_HASH
-bot_token = BOT_TOKEN
+api_id = 14965050
+api_hash = "38bab2dab10fc1b6a9ba0bf683fd7048"
+bot_token = "6471267140:AAEGhol_4_0H-pU-lNvmikhFFypGwELMKMI"
 dejavu = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 @dejavu.on(events.NewMessage(pattern='^/cancel'))
