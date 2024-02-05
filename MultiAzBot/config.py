@@ -1,0 +1,14 @@
+API_ID = xxxx
+API_HASH = "xxxxx"
+BOT_TOKEN = "xxxx"
+BOT_NAME = "xxxx"
+BOT_USERNAME = "xxxxx"
+OWNER_ID = xxxxxx
+LOG_CHANNEL = xxxxxx
+PLAYLIST_ID = xxxxxx
+ALIVE_IMG = "xxxxxx"
+START_IMG = "xxxxxxxxxx"
+CHANNEL = "t.me/xGuliyev"
+SUPPORT = "t.me/xGuliyev"
+OWNER_NAME = "t.me/xGuliyev"
+PLAYLIST_NAME = "t.me/xGuliyev"
