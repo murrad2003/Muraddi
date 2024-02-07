@@ -1,10 +1,9 @@
-# @AylinRobot
+
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
 import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio
 from MultiAzBot.TextBase.translator import *
-from MultiAzBot.config import Config
 from MultiAzBot import *
 from pyrogram import Client as USER
 import motor.motor_asyncio
@@ -90,8 +89,8 @@ class Database:
         return self.col.find({"ban_status.is_banned": True})
 
 
-db = Database(Config.MONGODB_URI, Config.BOT_USERNAME)
-mongo_db_veritabani = MongoClient(Config.MONGODB_URI)
+db = Database(MONGODB_URI, BOT_USERNAME)
+mongo_db_veritabani = MongoClient(MONGODB_URI)
 dcmdb = mongo_db_veritabani.handlers
 
 
@@ -102,7 +101,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
     if not await db.is_user_exist(chat_id):
         if cmd.chat.type == "private":
             await db.add_user(chat_id)
-            await app.send_message(Config.LOG_CHANNEL,LAN.BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id))
+            await app.send_message(LOG_CHANNEL,LAN.BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id))
         else:
             await db.add_user(chat_id)
             chat = bot.get_chat(chat_id)
@@ -110,7 +109,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
                 new_chat_id = str(chat_id)[4:]
             else:
                 new_chat_id = str(chat_id)[1:]
-            await app.send_message(Config.LOG_CHANNEL,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
+            await app.send_message(LOG_CHANNEL,LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, chat.title, cmd.chat.id, cmd.chat.id, cmd.message_id))
 
 
 
@@ -154,7 +153,7 @@ async def broadcast_messages_group(chat_id, message):
 
 
 
-@app.on_message(filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
+@app.on_message(filters.command("broadcast") & filters.user(OWNER_ID) & filters.reply)
 async def verupikkals(bot, message):
     users = await db.get_all_users()
     b_msg = message.reply_to_message
@@ -188,7 +187,7 @@ async def verupikkals(bot, message):
 
 
 
-@app.on_message(filters.command(["stats"]) & filters.user(Config.OWNER_ID))
+@app.on_message(filters.command(["stats"]) & filters.user(OWNER_ID))
 async def botstats(app: Client, message: Message):
     g4rip = await app.send_message(message.chat.id, LAN.STATS_STARTED.format(message.from_user.mention))
     all_users = await db.get_all_users()
@@ -215,13 +214,6 @@ async def botstats(app: Client, message: Message):
 @app.on_message()
 async def G4RIP(app: Client, cmd: Message):
     await handle_user_status(app, cmd)
-
-
-
-# Broadcast komutu
-@app.on_message(filters.command("broadcast") & filters.user(Config.OWNER_ID) & filters.reply)
-async def broadcast_handler_open(_, m: Message):
-    await main_broadcast_handler(m, db)
 
 
 ############## BELİRLİ GEREKLİ DEF'LER ###########
