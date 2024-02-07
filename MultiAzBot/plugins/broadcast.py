@@ -2,7 +2,7 @@
 # Sahib @HuseynH
 # Repo Açığdısa İcazəsis Götürmə Oğlum
 
-import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio, title
+import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio
 from MultiAzBot.TextBase.translator import *
 from MultiAzBot import *
 from pyrogram import Client as USER
