@@ -4,7 +4,7 @@
 
 import shutil, psutil, traceback, os, datetime, random, string, time, traceback, aiofiles, asyncio
 from MultiAzBot.TextBase.translator import *
-from MultiAzBot.plugins.config import Config
+from MultiAzBot.config import Config
 from MultiAzBot import *
 from pyrogram import Client as USER
 import motor.motor_asyncio
