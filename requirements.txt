@@ -40,3 +40,4 @@ telegram
 yt-dlp
 telethon
 pyfiglet
+colorama
