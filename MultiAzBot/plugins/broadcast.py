@@ -18,8 +18,6 @@ from pyrogram.errors import (
 )
 
     
-
-
     
 class Database: 
     def __init__(self, uri, database_name):
@@ -105,7 +103,7 @@ async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
         else:
             await db.add_user(chat_id)
             chat = bot.get_chat(chat_id)
-            if str(chat_id).startswith(f"{Config.LOG_CHANNEL}"):
+            if str(chat_id).startswith(f"{LOG_CHANNEL}"):
                 new_chat_id = str(chat_id)[4:]
             else:
                 new_chat_id = str(chat_id)[1:]
@@ -206,7 +204,7 @@ async def botstats(app: Client, message: Message):
     ram_usage = psutil.virtual_memory().percent
     disk_usage = psutil.disk_usage("/").percent
     total_users = await db.total_users_count()
-    await g4rip.edit(text=LAN.STATS.format(Config.BOT_USERNAME, total_users, groups, pms, total, used, disk_usage, free, cpu_usage, ram_usage, __version__))
+    await g4rip.edit(text=LAN.STATS.format(BOT_USERNAME, total_users, groups, pms, total, used, disk_usage, free, cpu_usage, ram_usage, __version__))
 
 
 
