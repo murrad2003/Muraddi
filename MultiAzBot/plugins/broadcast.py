@@ -94,24 +94,6 @@ dcmdb = mongo_db_veritabani.handlers
 
 
 ################## KULLANICI KONTROLLERİ #############
-async def handle_user_status(bot: Client, cmd: Message): # Kullanıcı kontrolü
-    chat_id = cmd.chat.id
-    if not await db.is_user_exist(chat_id):
-        if cmd.chat.type == "private":
-            await db.add_user(chat_id)
-            await bot.send_message(LOG_CHANNEL, LAN.BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id))
-        else:
-            await db.add_user(chat_id)
-            chat = bot.get_chat(chat_id)
-            if str(chat_id).startswith(f"{LOG_CHANNEL}"):
-                new_chat_id = str(chat_id)[4:]
-            else:
-                new_chat_id = str(chat_id)[1:]
-            await bot.send_message(LOG_CHANNEL, LAN.GRUP_BILDIRIM.format(cmd.from_user.first_name, cmd.from_user.id, cmd.from_user.first_name, cmd.from_user.id, cmd.chat.id, cmd.chat.id))
-
-
-
-
 
 async def broadcast_messages(user_id, message):
     try:
