@@ -6,11 +6,17 @@ from pyrogram.types import Message
 
 AylinIMG = f"{START_IMG}"
 
-
 @app.on_message(filters.private & filters.incoming & filters.command(['start']))
 async def start(client, message: Message):
     user = message.from_user
-    log_message = f"{user.first_name} {user.last_name} (@{user.username}) ({user.id}) Test"
+    log_message = (
+        f"🚀 **#YENİ_İSTİFADECİ Botu Başlatıldı!**\n\n"
+        f"👤 **Ad:** {user.first_name}\n"
+        f"👥 **Soyad:** {user.last_name}\n"
+        f"🔖 **Tag Adı:** @{user.username}\n"
+        f"🆔 **İstifadəçi ID:** ({user.id})\n"
+        "Test"
+    )
     await client.send_message(LOG_CHANNEL, log_message)
     await message.reply_photo(
         AylinIMG,  # AylinIMG'yi kendi başlatma görselinizle değiştirmelisiniz
