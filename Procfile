@@ -1,1 +1,1 @@
-worker: python3 -m MultiAzBot
+worker: python3 -m MultiAzBot & python3 tag.py
