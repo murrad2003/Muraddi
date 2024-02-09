@@ -11,7 +11,7 @@ LOGGER = logging.getLogger(__name__)
 
 api_id = 14965050
 api_hash = "38bab2dab10fc1b6a9ba0bf683fd7048"
-bot_token = "6471267140:AAEGhol_4_0H-pU-lNvmikhFFypGwELMKMI"
+bot_token = "6552355594:AAHwRsdvgrycv_cDAhNv94HUQAdomu14U7w"
 dejavu = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 @dejavu.on(events.NewMessage(pattern='^/cancel'))
