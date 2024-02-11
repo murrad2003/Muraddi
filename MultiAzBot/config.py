@@ -1,15 +1,15 @@
 API_ID = 14965050
 API_HASH = "38bab2dab10fc1b6a9ba0bf683fd7048"
-BOT_TOKEN = "6552355594:AAHwRsdvgrycv_cDAhNv94HUQAdomu14U7w"
-BOT_NAME = "GulFidan🤍"
-BOT_USERNAME = "GulfidanRoBot"
-OWNER_ID = 6184111182
-LOG_CHANNEL = -1001987364085
-PLAYLIST_ID = -1001884377794
-ALIVE_IMG = "https://telegra.ph/file/f822b61d12266f4b59774.jpg"
-START_IMG = "https://telegra.ph/file/f822b61d12266f4b59774.jpg"
-CHANNEL = "PasterBots"
+BOT_TOKEN = "6777926149:AAEMoOvCwCo2AZgz5zCZyXcrn_6jtX1ou8s"
+BOT_NAME = "Rika Tag Bot"
+BOT_USERNAME = "RikaTagBot"
+OWNER_ID = 6714050984
+LOG_CHANNEL = -1002141952511
+PLAYLIST_ID = -1002100160994
+ALIVE_IMG = "https://telegra.ph/file/a0517026e0c4fb49b0a71.jpg"
+START_IMG = "https://telegra.ph/file/a0517026e0c4fb49b0a71.jpg"
+CHANNEL = "RikaBots"
 SUPPORT = "BizimChat"
-OWNER_NAME = "ElikoOwner"
-PLAYLIST_NAME = "GunayPlaylist"
-MONGODB_URI = "mongodb+srv://music:music@cluster0.sh6h4.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+OWNER_NAME = "ElgunOwmer"
+PLAYLIST_NAME = "RikaTagPlaylist"
+MONGODB_URI = "mongodb+srv://RikaTagBot:RikaTagBot@rikatagbot.mkwbpd6.mongodb.net/?retryWrites=true&w=majority"
