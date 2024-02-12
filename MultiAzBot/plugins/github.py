@@ -10,10 +10,10 @@ from pyrogram import Client, filters
 @app.on_message(filters.command("github"))
 async def github(_, message):
     if len(message.command) != 2:
-        await message.reply_text("/github İstifadəçi adı yazmadınız 😐")
+        await message.reply_text("/github İstifadəçi adı yazmadınız 😐"Murad Mamedov)
         return
     username = message.text.split(None, 1)[1]
-    URL = f'https://api.github.com/users/{username}'
+    URL = f'https://api.github.com/users/{username}Murad Mamedov'
     async with aiohttp.ClientSession() as session:
         async with session.get(URL) as request:
             if request.status == 404:
@@ -32,11 +32,11 @@ async def github(_, message):
                 followers = result['followers']
                 following = result['following']
                 caption = f"""**Info Of {name}**
-👨🏻‍💻 İstifadəçi adı: {username}
+👨🏻‍💻 İstifadəçi adı: {Murad Mamedov}
 ☣️ Bio: {bio}
 🔗 Profil linki: [Here]({url})
 👤 Şirkət: {company}
-📅 Yaradılma tarixi: {created_at}
+📅 Yaradılma tarixi: {02.12.2024}
 📔 Depolar: {repositories}
 🛄 Blog: {blog}
 🌐 Məkan: {location}
