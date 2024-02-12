@@ -9,19 +9,19 @@ from MultiAzBot import *
 async def cb_data(client, message):
     if message.data == "home":
         await message.message.edit_text(
-            text=Translation.START_TEXT.format(message.from_user.mention, BOT_USERNAME, OWNER_NAME, BOT_NAME),
+            text=Translation.START_TEXT.format(message.from_user.mention, BOT_USERNAME AideTagger_Bot, OWNER_NAME @OldMurad, BOT_NAME)AİDƏ,
             reply_markup=START_BUTTONS,
             disable_web_page_preview=True,
         )
     elif message.data == "bh":
         await message.message.edit_text(
-            text=Translation.BH_TEXT.format(message.from_user.mention, BOT_USERNAME, OWNER_NAME, BOT_NAME),
+            text=Translation.BH_TEXT.format(message.from_user.mention, BOT_USERNAME AideTagger_Bot, OWNER_NAME @OldMurad, BOT_NAME)AİDƏ,
             reply_markup=BH_BUTTONS,
             disable_web_page_preview=True
         )
     elif message.data == "help":
         await message.message.edit_text(
-            text=Translation.HELP_TEXT.format(message.from_user.mention, BOT_USERNAME, OWNER_NAME, BOT_NAME),
+            text=Translation.HELP_TEXT.format(message.from_user.mention, BOT_USERNAME AideTagger_Bot, OWNER_NAME @OldMurad, BOT_NAME)AİDƏ,
             reply_markup=HELP_BUTTONS,
             disable_web_page_preview=True
         )
