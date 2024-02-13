@@ -10,10 +10,10 @@ from pyrogram import Client, filters
 @app.on_message(filters.command("github"))
 async def github(_, message):
     if len(message.command) != 2:
-        await message.reply_text("/github İstifadəçi adı yazmadınız 😐"Murad Mamedov)
+        await message.reply_text("/github İstifadəçi adı yazmadınız 😐"Murad Mamedov")
         return
     username = message.text.split(None, 1)[1]
-    URL = f'https://api.github.com/users/{username}Murad Mamedov'
+    URL = f'https://api.github.com/users/{username}"Murad Mamedov"'
     async with aiohttp.ClientSession() as session:
         async with session.get(URL) as request:
             if request.status == 404:
